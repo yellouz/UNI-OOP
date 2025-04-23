@@ -3,7 +3,7 @@
 #include <memory>
 using namespace std;
 
-void afficherTableau(int *tab, int taille, string titre = "Contenu: ")
+inline void afficherTableau(int *tab, int taille, string titre = "Contenu: ")
 {
     cout << titre;
     for (int i = 0; i < taille; i++)
@@ -22,11 +22,11 @@ int main()
     tab1[4] = 5;
 
     unique_ptr <int[]> tab2(new int[5]);
-    tab2[0] = 1;
-    tab2[1] = 2;
-    tab2[2] = 3;
-    tab2[3] = 4;
-    tab2[4] = 5;
+    tab2[0] = 6;
+    tab2[1] = 7;
+    tab2[2] = 8;
+    tab2[3] = 9;
+    tab2[4] = 10;
 
     afficherTableau(tab1, 5, "tab1: ");
     afficherTableau(tab2.get(), 5, "tab2: ");
